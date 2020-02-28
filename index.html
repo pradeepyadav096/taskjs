@@ -1,0 +1,132 @@
+<html>
+<head>
+	<title>
+		JavascriptTask
+	</title>
+	<style type="text/css">
+		body
+		{
+			background-color: #4158D0;
+			background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+			
+		}
+		.main
+		{	border: 1px solid #000;
+			width: 40%;
+			height: 60%;
+			margin-left: 500px;
+			margin-top: 140px;
+			background-color: #A9C9FF;
+			background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+			box-shadow: 10px 10px 8px purple;
+		}
+		.btn
+		{
+			background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+			box-shadow: 10px 10px 8px purple;
+			border: 1px solid #000;
+			width: 100px;
+			height: 50px;
+			margin: 20px;
+			font-size: 15px;
+			font-family: monospace;
+			
+
+		}
+
+		
+
+		.inner
+		{
+			border: 3px solid black;
+			width: 10%;
+			height: 60%;
+			margin-left: 250px;
+			margin-top: 30px;
+			box-shadow: 0 5px 3px 0 black;
+			background: #fff;
+		}
+
+		.data
+		{
+			width: 100%;
+			height: 20%;
+			text-align: center;
+			padding: 1px;
+			cursor: pointer;
+		}
+
+		.link
+		{
+			text-decoration: none;
+		}
+		.link:focus
+		{
+			color: black;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<button class="btn"><a href="index.html" class="link">Go Back</a></button>
+		<div class="inner">
+			<div class="data">
+				<p id="data1" onclick="array1()">Array 1</p>
+			</div>
+			<hr>
+			<div class="data">
+				<p id="data2" onclick="array2()">Array 2</p>
+			</div>
+			<hr>
+			<div class="data">
+				<p id="data3" onclick="array3()">Array 3</p>
+			</div>
+			<hr>
+			<div class="data">
+				<p id="data4" onclick="array4()">Array 4</p>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+
+		var arr1 = [10,20,30,45];
+		var arr2 = [11,22,33,56];
+		var arr3 = [12,22,34,78];
+		var arr4 = [34,23,12,90];
+
+
+		function array1()
+		{
+			document.getElementById("data1").innerHTML = arr1[0];
+			document.getElementById("data2").innerHTML = arr1[1];
+			document.getElementById("data3").innerHTML = arr1[2];
+			document.getElementById("data4").innerHTML = arr1[3];
+		}
+
+		function array2()
+		{
+			document.getElementById("data1").innerHTML = arr2[0];
+			document.getElementById("data2").innerHTML = arr2[1];
+			document.getElementById("data3").innerHTML = arr2[2];
+			document.getElementById("data4").innerHTML = arr2[3]; 
+		}
+
+		function array3()
+		{
+			document.getElementById("data1").innerHTML = arr3[0];
+			document.getElementById("data2").innerHTML = arr3[1];
+			document.getElementById("data3").innerHTML = arr3[2];
+			document.getElementById("data4").innerHTML = arr3[3];
+		}
+
+		function array4()
+		{
+			document.getElementById("data1").innerHTML = arr4[0];
+			document.getElementById("data2").innerHTML = arr4[1];
+			document.getElementById("data3").innerHTML = arr4[2];
+			document.getElementById("data4").innerHTML = arr4[3];
+		}
+	
+	</script>>
+</body>
+</html>
