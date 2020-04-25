@@ -1,132 +1,115 @@
-<html>
-<head>
-	<title>
-		JavascriptTask
-	</title>
-	<style type="text/css">
-		body
-		{
-			background-color: #4158D0;
-			background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-			
-		}
-		.main
-		{	border: 1px solid #000;
-			width: 40%;
-			height: 60%;
-			margin-left: 500px;
-			margin-top: 140px;
-			background-color: #A9C9FF;
-			background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
-			box-shadow: 10px 10px 8px purple;
-		}
-		.btn
-		{
-			background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
-			box-shadow: 10px 10px 8px purple;
-			border: 1px solid #000;
-			width: 100px;
-			height: 50px;
-			margin: 20px;
-			font-size: 15px;
-			font-family: monospace;
-			
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style type="text/css">
+        li
+        {
+            font-size: 34px;
+            text-decoration: none;
+            list-style-type:none; 
+            cursor: pointer;
+            
+        }
+    </style>
 
-		}
-
-		
-
-		.inner
-		{
-			border: 3px solid black;
-			width: 10%;
-			height: 60%;
-			margin-left: 250px;
-			margin-top: 30px;
-			box-shadow: 0 5px 3px 0 black;
-			background: #fff;
-		}
-
-		.data
-		{
-			width: 100%;
-			height: 20%;
-			text-align: center;
-			padding: 1px;
-			cursor: pointer;
-		}
-
-		.link
-		{
-			text-decoration: none;
-		}
-		.link:focus
-		{
-			color: black;
-		}
-	</style>
-</head>
-<body>
-	<div class="main">
-		<button class="btn"><a href="index.html" class="link">Go Back</a></button>
-		<div class="inner">
-			<div class="data">
-				<p id="data1" onclick="array1()">Array 1</p>
-			</div>
-			<hr>
-			<div class="data">
-				<p id="data2" onclick="array2()">Array 2</p>
-			</div>
-			<hr>
-			<div class="data">
-				<p id="data3" onclick="array3()">Array 3</p>
-			</div>
-			<hr>
-			<div class="data">
-				<p id="data4" onclick="array4()">Array 4</p>
-			</div>
-		</div>
-	</div>
-	<script type="text/javascript">
-
-		var arr1 = [10,20,30,45];
-		var arr2 = [11,22,33,56];
-		var arr3 = [12,22,34,78];
-		var arr4 = [34,23,12,90];
+    <title>JavaScriptTask</title>
+  </head>
+  <body onload="arraylist()">
+    <div class="navbar navbar-expand-lg navbar-dark bg-light shadow-lg p-3 mb-5 bg-white">
+<span class="navbar-brand font-weight-bolder" style="color: red; letter-spacing: 5px;">ORACLE</span>    	
+    </div>
+    <div>
+    	<div class="row shadow-lg p-3 mb-5 bg-white rounded" style="width: 100%; height: 620px ;">
+            
+            <div id="data" class="rounded navbar bg-secondary col-sm-1" style="width: 10%; height: 590px ; color: #fff; padding-left: 25px;">
+                
+            </div>
 
 
-		function array1()
-		{
-			document.getElementById("data1").innerHTML = arr1[0];
-			document.getElementById("data2").innerHTML = arr1[1];
-			document.getElementById("data3").innerHTML = arr1[2];
-			document.getElementById("data4").innerHTML = arr1[3];
-		}
+            <div class="col-sm-11" >
+            <button style="margin-top:250px; margin-left: 500px ; box-shadow: 5px 9px 5px black" class="btn btn-lg btn-danger"><a class="display-4" style="text-decoration: none; color:white" onclick="arraylist()"><i class="fa fa-angle-double-left" style="font-size:48px;">  Go Back</i></a>
+            </button>
+        </div>
+    	</div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    	
 
-		function array2()
-		{
-			document.getElementById("data1").innerHTML = arr2[0];
-			document.getElementById("data2").innerHTML = arr2[1];
-			document.getElementById("data3").innerHTML = arr2[2];
-			document.getElementById("data4").innerHTML = arr2[3]; 
-		}
+    	var arrlist=[1,2,3,4];
+    	var arr1=[34,56,12,67,56,34,23,23,12]; 
+        var arr2=[23,34,45,56,56,78,34];
+        var arr3=[30,20,10,78,25];
+        var arr4=[19,29,39,49,78,23];
 
-		function array3()
-		{
-			document.getElementById("data1").innerHTML = arr3[0];
-			document.getElementById("data2").innerHTML = arr3[1];
-			document.getElementById("data3").innerHTML = arr3[2];
-			document.getElementById("data4").innerHTML = arr3[3];
-		}
+        function arraylist()
+    	{
 
-		function array4()
-		{
-			document.getElementById("data1").innerHTML = arr4[0];
-			document.getElementById("data2").innerHTML = arr4[1];
-			document.getElementById("data3").innerHTML = arr4[2];
-			document.getElementById("data4").innerHTML = arr4[3];
-		}
-	
-	</script>>
-</body>
+    		var text,i;
+    		text = "<ul>";
+    		for(i=0;i<arrlist.length;i++)
+    		{
+    			text+= "<li id="+i+" onclick='respond("+i+")'>" + arrlist[i] + "</li>";
+    		}
+    		text+="</ul>";
+
+
+    		document.getElementById("data").innerHTML = text;
+    	}
+
+        function respond(i)
+        {
+            if(i==0)
+            {
+                var text,i;
+                text = "<ul>";
+                for(i=0;i<arr1.length;i++)
+                {
+                    text+="<li >"+arr1[i]+"</li>";
+                }
+                text+= "</ul>";
+                document.getElementById("data").innerHTML = text;
+            }
+            else if(i==1)
+            {
+                 var text,i;
+                text = "<ul>";
+                for(i=0;i<arr2.length;i++)
+                {
+                    text+="<li >"+arr2[i]+"</li>";
+                }
+                text+= "</ul>";
+                document.getElementById("data").innerHTML = text;
+            }
+            else if(i==2)
+            {
+                var text,i;
+                text = "<ul>";
+                for(i=0;i<arr3.length;i++)
+                {
+                    text+="<li >"+arr3[i]+"</li>";
+                }
+                text+= "</ul>";
+                document.getElementById("data").innerHTML = text;
+            }
+            else if(i==3)
+            {
+                var text,i;
+                text = "<ul>";
+                for(i=0;i<arr4.length;i++)
+                {
+                    text+="<li >"+arr4[i]+"</li>";
+                }
+                text+= "</ul>";
+                document.getElementById("data").innerHTML = text;
+            }
+        } 
+    </script>
+  </body>
 </html>
